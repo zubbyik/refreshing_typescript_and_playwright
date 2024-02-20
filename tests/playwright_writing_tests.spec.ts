@@ -1,7 +1,7 @@
 import {test, expect} from "@playwright/test";
 require('dotenv').config()
 
-const URL = process.env.URL
+const URL = process.env['URL']
 
 test('Has Title', async ({page})=>{
     await page.goto(URL)
