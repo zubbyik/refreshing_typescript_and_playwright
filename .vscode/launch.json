@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Playwright tests",
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "vscode-debug", "--", "${fileBasename}"],
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Playwright Inspector",
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "vscode-debug", "--", "${fileBasename}"],
+      "env": {
+        "PWDEBUG": "1",
+      }
+    }
+  ]
+}

@@ -3,7 +3,9 @@ import {test, expect} from "@playwright/test";
 test("filter text from locators", async ({page})=>{
     await page.goto("https://the-internet.herokuapp.com")
     await page.getByText("Challenging DOM").click()
-    await expect(page.title()).toBe("https://the-internet.herokuapp.com/challenging_dom")
+    await expect(page.url()).toBe(
+      "https://the-internet.herokuapp.com/challenging_dom"
+    );
     let content = await page.locator("#content")
     let table = await content.locator("table")
     let rows = await table.locator("tr").all()

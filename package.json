@@ -9,9 +9,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.41.2",
-    "@types/node": "^20.11.19"
+    "@types/node": "^20.11.19",
+    "@types/prompt-sync": "^4.2.3"
   },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "prompt-sync": "^4.2.0"
   }
 }

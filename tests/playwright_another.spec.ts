@@ -9,7 +9,8 @@ require("dotenv").config()
 
 // Some Gotcha with this line!
 // Please do not use the dot notation on the process.env e.g. use process.env['key'] instead of process.env.key
-const HEROKU_URL = process.env["HEROKU_URL"]
+const HEROKU_URL =
+  process.env["HEROKU_URL"] || "https://the-internet.herokuapp.com/";
 
 test("checking heroku url", async ({page})=>{
 
